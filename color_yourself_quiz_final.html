@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f4ff">
+<title>색으로 알아보는 심리 시그널</title>
+<style>
+:root{--ink:#28243a;--muted:#77738a;--paper:#fbfaff;--line:#ece8f5;--accent:#8d70d6}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#fff9fb,#f6f4ff 52%,#f2fbff);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer}.shell{width:min(760px,100%);margin:auto;padding:28px 18px 54px}.brand{font-size:12px;letter-spacing:.22em;font-weight:800;color:#8c7eaa;text-align:center;margin:8px 0 28px}
+.card{background:#ffffffd9;border:1px solid #fff;border-radius:28px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 60px #62528b12}
+.hero{text-align:center}.rainbow{height:12px;border-radius:30px;background:linear-gradient(90deg,#f06b75,#ffad63,#f6d96b,#78c98e,#6abce4,#7187d8,#b28be0);margin:0 auto 28px;max-width:420px}
+h1{font-size:clamp(32px,7vw,52px);letter-spacing:-.06em;line-height:1.12;margin:12px 0}.subtitle{color:var(--muted);line-height:1.8;margin:14px auto 26px;max-width:480px}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 28px}.pill{background:#f4f0fb;border-radius:99px;padding:8px 13px;font-size:12px;color:#71658c}
+.primary{border:0;background:linear-gradient(100deg,#9278d8,#719fe0);color:white;font-weight:750;border-radius:16px;padding:15px 25px;min-width:190px;box-shadow:0 8px 20px #8876c833}.primary:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.smallnote{font-size:12px;color:#9892a5;margin-top:18px}
+.topline{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-bottom:12px}.track{height:7px;background:#efedf4;border-radius:20px;overflow:hidden;margin-bottom:28px}.fill{height:100%;width:0;background:linear-gradient(90deg,#f07883,#f4c96b,#6dbbcb,#9477d5);transition:width .25s}
+.qnum{font-size:12px;letter-spacing:.12em;color:#927fc0;font-weight:800}.question{font-size:clamp(22px,5vw,30px);line-height:1.45;letter-spacing:-.04em;margin:10px 0 25px}.answers{display:grid;gap:11px}.answer{width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px 18px;color:#403b50;line-height:1.55;transition:.15s}.answer:hover{border-color:#b8a6e7;background:#faf8ff;transform:translateY(-1px)}.answer:focus-visible,button:focus-visible{outline:3px solid #bba9ed;outline-offset:3px}
+.result{text-align:center}.result-tag{font-size:12px;letter-spacing:.16em;color:#8c7ba9;font-weight:800}.swatch{width:116px;height:116px;border-radius:50%;margin:22px auto 18px;box-shadow:inset 0 0 0 8px #ffffff55,0 12px 35px #40334a20}.color-pair{display:flex;justify-content:center;align-items:center;gap:24px;margin:22px auto 12px}.color-item{width:112px;font-size:13px;color:#716c7e}.color-item .swatch{width:76px;height:76px;margin:0 auto 9px}.nickname{font-size:clamp(21px,5vw,29px);font-weight:850;line-height:1.4;letter-spacing:-.04em;margin:10px 0 5px}.subline{font-size:14px;color:#817a90;margin:5px 0 16px}.result h2{font-size:clamp(27px,6vw,38px);margin:8px 0 4px;letter-spacing:-.05em}.adjective{font-weight:750;font-size:17px;margin:0 0 18px}.desc{color:#686277;line-height:1.9;max-width:520px;margin:0 auto 22px}.keywords{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:20px 0 28px}.keyword{border-radius:99px;background:#f3f0f8;padding:9px 13px;font-size:13px}.result-box{background:#faf8fd;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:left;margin:24px 0}.result-box h3{font-size:14px;margin:0 0 8px}.result-box p{color:#716c7e;line-height:1.7;margin:0;font-size:14px}.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.secondary{background:#fff;border:1px solid var(--line);border-radius:15px;padding:13px 20px;color:#625b73;font-weight:650}
+.footer{text-align:center;color:#aaa4b5;font-size:11px;margin:20px 0 0}
+@media(max-width:480px){.shell{padding:16px 13px 35px}.card{border-radius:23px}.answer{padding:15px}.primary{width:100%}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <div class="brand">색으로 알아보는 심리 시그널</div>
+  <section class="card hero" id="start">
+    <div class="rainbow"></div>
+    <div class="result-tag">A LITTLE TEST, A LITTLE DISCOVERY</div>
+    <h1>색으로 알아보는<br>심리 시그널</h1>
+    <p class="subtitle">20개의 질문으로 발견하는 나만의 성격 컬러.<br>일상 속 선택을 따라가며 나를 표현하는 색을 찾아봐!</p>
+    <div class="pills"><span class="pill">🌈 7가지 컬러</span><span class="pill">✦ 약 3분</span><span class="pill">♡ 정답 없음</span></div>
+    <button class="primary" id="startBtn">테스트 시작하기</button>
+    <p class="smallnote">이 테스트는 재미를 위한 성격 콘텐츠이며 전문적인 심리 진단이 아닙니다.</p>
+  </section>
+
+  <section class="card" id="quiz" hidden>
+    <div class="topline"><span id="stepLabel">QUESTION 01 / 20</span><span id="percent">5%</span></div>
+    <div class="track"><div class="fill" id="progress"></div></div>
+    <div class="qnum" id="qnum">QUESTION 01</div>
+    <h2 class="question" id="question"></h2>
+    <div class="answers" id="answers"></div>
+    <p class="smallnote">가장 나다운 답을 골라줘. 고민된다면 평소의 나를 떠올려 봐!</p>
+  </section>
+
+  <section class="card result" id="result" hidden>
+    <div class="result-tag">YOUR RAINBOW COLOR</div>
+    <div class="color-pair">
+      <div class="color-item"><div class="swatch" id="swatch"></div><strong>MAIN COLOR</strong><div id="mainColorName"></div></div>
+      <div class="color-item"><div class="swatch" id="subSwatch"></div><strong>SUB COLOR</strong><div id="subColorName"></div></div>
+    </div>
+    <div class="result-tag" id="englishName"></div>
+    <h2 id="resultName"></h2>
+    <p class="adjective" id="adjective"></p>
+    <div class="result-box"><h3>🌈 나의 최종 별명</h3><div class="nickname" id="nickname"></div><p class="subline" id="nicknameExplain"></p></div>
+    <p class="desc" id="description"></p>
+    <div class="keywords" id="keywords"></div>
+    <div class="result-box"><h3>✦ 나의 매력</h3><p id="strength"></p></div>
+    <div class="result-box"><h3>☁ 나를 위한 한마디</h3><p id="message"></p></div>
+    <div class="actions"><button class="primary" id="againBtn">처음부터 다시 하기</button></div>
+    <p class="smallnote">결과는 답변 경향을 바탕으로 한 재미있는 해석이야.</p>
+  </section>
+  <div class="footer">색으로 알아보는 심리 시그널</div>
+</main>
+<script>
+const colors = {
+ red:{name:"열정의 빨강",short:"빨강",mood:"뜨거운 열정",en:"PASSION RED",hex:"#ed6570",adj:"뜨겁게 타오르는 열정적인 사람",desc:"마음이 움직이면 망설이기보다 먼저 도전하는 편이에요. 목표가 생기면 에너지를 집중하고, 주변에도 추진력을 전하는 사람이에요.",keys:["도전적인","적극적인","추진력 있는","솔직한"],strength:"하고 싶은 일을 향해 행동으로 옮기는 힘이 있어요. 어려운 순간에도 쉽게 포기하지 않는 끈기가 매력이에요.",message:"모든 순간에 앞장서지 않아도 괜찮아요. 잠시 쉬어 가는 것도 앞으로 나아가는 방법이에요."},
+ orange:{name:"온기의 주황",short:"주황",mood:"따스한 온기",en:"WARM ORANGE",hex:"#f39a57",adj:"따스하게 빛나는 사교적인 사람",desc:"사람들과 어울리며 활력을 얻고, 주변 분위기를 부드럽게 만드는 편이에요. 새로운 만남과 즐거운 경험에 열린 마음을 가지고 있어요.",keys:["친근한","유쾌한","활발한","다정한"],strength:"먼저 말을 건네고 사람 사이의 어색함을 풀어 주는 재능이 있어요. 함께하는 사람을 편안하게 만드는 힘이 있어요.",message:"모두를 즐겁게 해 주려고 애쓰지 않아도 돼요. 당신의 편안한 모습만으로도 충분히 좋아요."},
+ yellow:{name:"햇살의 노랑",short:"노랑",mood:"반짝이는 호기심",en:"SUNSHINE YELLOW",hex:"#e9c94e",adj:"햇살처럼 반짝이는 낙천적인 사람",desc:"익숙한 일상에서도 새로운 재미를 발견하고, 호기심을 따라 움직이는 편이에요. 밝은 시선과 풍부한 아이디어가 당신을 돋보이게 해요.",keys:["긍정적인","호기심 많은","창의적인","재치 있는"],strength:"남들이 지나치는 가능성을 발견하고 새로운 생각을 떠올리는 능력이 있어요. 주변에 희망적인 분위기를 더해 줘요.",message:"밝은 모습 뒤에 있는 고민도 소중해요. 언제나 긍정적일 필요는 없다는 걸 기억해요."},
+ green:{name:"균형의 초록",short:"초록",mood:"싱그러운 균형",en:"BALANCED GREEN",hex:"#69b985",adj:"싱그럽고 단단한 균형 잡힌 사람",desc:"서두르기보다 상황을 살피고, 사람들과 조화를 이루는 것을 중요하게 생각해요. 차분하고 꾸준한 태도로 주변에 안정감을 주는 편이에요.",keys:["차분한","신중한","안정적인","배려하는"],strength:"복잡한 상황에서도 중심을 잡고 꾸준히 해내는 힘이 있어요. 다른 사람의 입장도 살피는 세심함이 장점이에요.",message:"다른 사람을 배려하는 만큼 자신의 마음과 원하는 것도 살펴봐 주세요."},
+ blue:{name:"맑음의 파랑",short:"파랑",mood:"맑은 이성",en:"CLEAR BLUE",hex:"#68addb",adj:"깊고 맑은 이성적인 사람",desc:"감정에 휩쓸리기보다 한 걸음 떨어져 상황을 바라보려 해요. 정보를 정리하고 차근차근 판단할 때 자신의 능력이 잘 드러나요.",keys:["논리적인","침착한","분석적인","명확한"],strength:"문제를 체계적으로 바라보고 핵심을 찾아내는 능력이 있어요. 차분한 판단은 주변 사람에게 믿음을 줘요.",message:"모든 일을 완벽하게 이해한 뒤 시작할 필요는 없어요. 때로는 마음이 이끄는 선택도 괜찮아요."},
+ indigo:{name:"사색의 남색",short:"남색",mood:"깊은 사색",en:"THOUGHTFUL INDIGO",hex:"#596bb5",adj:"고요하고 깊이 있는 사색적인 사람",desc:"혼자 생각을 정리하는 시간을 소중히 여기고, 겉으로 드러난 모습보다 그 안의 의미를 궁금해하는 편이에요. 자신만의 기준이 뚜렷해요.",keys:["독립적인","통찰력 있는","깊이 있는","신중한"],strength:"한 가지를 오래 생각하고 본질을 파악하는 집중력이 있어요. 유행에 휩쓸리지 않고 자기만의 관점을 지켜요.",message:"혼자만의 시간도 좋지만, 마음을 나눌 수 있는 사람에게 생각을 들려줘도 좋아요."},
+ violet:{name:"상상의 보라",short:"보라",mood:"풍부한 상상력",en:"MYSTIC VIOLET",hex:"#a17bd0",adj:"신비롭고 섬세한 감성적인 사람",desc:"풍부한 상상력과 섬세한 감수성으로 세상을 바라봐요. 남들과 조금 다른 생각을 즐기고, 자신만의 취향과 가치관을 소중히 여기는 편이에요.",keys:["감수성 있는","상상력 풍부한","독창적인","섬세한"],strength:"작은 것에서도 특별한 의미를 발견하고 새로운 관점으로 표현하는 능력이 있어요. 자신만의 색깔이 뚜렷해요.",message:"남들과 다르다는 점은 고쳐야 할 부분이 아니라 당신만의 가능성이에요."}
+};
+const questions = [
+["처음 만난 사람들과 함께 있을 때 나는?",[["먼저 말을 걸고 분위기를 이끈다","red"],["자연스럽게 대화에 참여하며 친해진다","orange"],["상대와 상황을 살피며 천천히 다가간다","green"],["먼저 관찰하고 생각을 정리한다","indigo"]]],
+["갑자기 계획에 없던 일이 생기면?",[["일단 부딪혀 보며 해결한다","red"],["새로운 경험이라 생각하고 즐긴다","yellow"],["차분하게 상황을 정리한다","blue"],["혼자 생각할 시간을 갖고 싶다","indigo"]]],
+["쉬는 날 가장 하고 싶은 일은?",[["새로운 활동이나 도전을 해 본다","red"],["친구들과 만나 신나게 논다","orange"],["좋아하는 취미를 자유롭게 즐긴다","violet"],["조용한 곳에서 편안하게 쉰다","green"]]],
+["친구가 고민을 털어놓으면 나는?",[["해결할 방법을 바로 함께 찾아본다","blue"],["기분이 나아지도록 밝게 응원한다","yellow"],["말을 충분히 들어주고 공감한다","green"],["상대의 마음을 깊이 헤아려 본다","violet"]]],
+["새로운 도전을 앞두고 있을 때 나는?",[["성공을 상상하며 바로 시작한다","red"],["재미있을 것 같아 기대된다","yellow"],["필요한 정보를 충분히 찾아본다","blue"],["나에게 어떤 의미일지 생각해 본다","indigo"]]],
+["중요한 결정을 내려야 할 때 가장 중요한 것은?",[["내가 진정으로 원하는 것","red"],["주변 사람들과의 관계","orange"],["현실적인 조건과 근거","blue"],["내 가치관과 마음의 확신","violet"]]],
+["의견이 다른 사람과 대화할 때 나는?",[["내 생각을 분명하게 전달한다","red"],["서로 기분 상하지 않게 조율한다","orange"],["근거를 바탕으로 차분히 이야기한다","blue"],["상대가 왜 그렇게 생각하는지 먼저 듣는다","green"]]],
+["어려운 문제를 만났을 때 나의 해결 방식은?",[["여러 방법을 시도하며 돌파한다","red"],["주변 사람들과 아이디어를 나눈다","orange"],["원인을 나누어 논리적으로 분석한다","blue"],["다른 관점에서 새롭게 바라본다","violet"]]],
+["무언가를 시작하기 전에 나는?",[["목표를 정하고 빠르게 시작한다","red"],["기대되는 마음으로 일단 해 본다","yellow"],["계획과 순서를 꼼꼼히 세운다","green"],["혼자 충분히 상상하고 구상한다","violet"]]],
+["실패했을 때 가장 먼저 드는 생각은?",[["다시 도전해서 만회해야겠다","red"],["괜찮아, 다음엔 더 잘하면 돼","yellow"],["무엇이 잘못됐는지 분석해 본다","blue"],["이번 경험이 나에게 준 의미를 생각한다","indigo"]]],
+["친구들과 여행을 간다면 나는?",[["일정을 정하고 앞장서는 역할","red"],["모두가 즐겁도록 분위기를 띄우는 역할","orange"],["시간과 동선을 꼼꼼히 챙기는 역할","blue"],["사진과 추억을 감성적으로 남기는 역할","violet"]]],
+["친구가 약속을 갑자기 취소한다면?",[["솔직하게 아쉬움을 표현한다","red"],["괜찮다며 다른 계획을 찾아본다","yellow"],["사정을 듣고 이해하려고 한다","green"],["혼자만의 시간을 보내면 된다고 생각한다","indigo"]]],
+["단체 활동에서 내가 맡고 싶은 역할은?",[["팀을 이끄는 리더","red"],["사람들을 연결하는 분위기 메이커","orange"],["일정을 정리하는 계획 담당","blue"],["독특한 아이디어를 내는 기획자","violet"]]],
+["친구들이 나를 어떤 사람으로 생각하면 좋겠는가?",[["믿고 따라갈 수 있는 사람","red"],["함께 있으면 즐거운 사람","orange"],["언제나 편안하고 믿음직한 사람","green"],["생각이 깊고 특별한 사람","indigo"]]],
+["누군가 나에게 칭찬을 해준다면 가장 기분 좋은 말은?",[["정말 추진력 있고 멋지다","red"],["너와 있으면 즐겁고 편해","orange"],["넌 참 믿음직하고 배려심 있어","green"],["너만의 생각과 감각이 참 좋아","violet"]]],
+["아무도 나를 모르는 새로운 장소에 간다면?",[["먼저 탐험하며 새로운 것을 찾아본다","red"],["현지 사람들과 어울려 본다","orange"],["주변을 천천히 둘러보며 적응한다","green"],["그 장소의 분위기와 이야기를 상상한다","violet"]]],
+["하루 동안 특별한 능력이 생긴다면?",[["어떤 일이든 해내는 강한 실행력","red"],["누구와도 친해지는 능력","orange"],["복잡한 문제를 한눈에 파악하는 능력","blue"],["상상한 것을 현실로 만드는 능력","yellow"]]],
+["내가 가장 중요하게 생각하는 가치는?",[["도전과 성취","red"],["즐거움과 관계","orange"],["안정과 조화","green"],["자유와 독창성","violet"]]],
+["미래의 나에게 가장 바라는 모습은?",[["원하는 목표를 이룬 나","red"],["좋은 사람들과 행복한 나","orange"],["안정되고 균형 잡힌 나","green"],["나만의 길을 만들어 가는 나","indigo"]]],
+["나를 하나의 단어로 표현한다면?",[["열정","red"],["햇살","yellow"],["평온","green"],["상상","violet"]]]
+];
+let index=0, scores={red:0,orange:0,yellow:0,green:0,blue:0,indigo:0,violet:0};
+const $=id=>document.getElementById(id);
+function start(){index=0;scores={red:0,orange:0,yellow:0,green:0,blue:0,indigo:0,violet:0};$("start").hidden=true;$("result").hidden=true;$("quiz").hidden=false;renderQuestion();window.scrollTo({top:0,behavior:"smooth"});}
+function renderQuestion(){const q=questions[index];$("stepLabel").textContent=`QUESTION ${String(index+1).padStart(2,"0")} / 20`;$("percent").textContent=`${Math.round((index+1)/20*100)}%`;$("progress").style.width=`${(index+1)/20*100}%`;$("qnum").textContent=`QUESTION ${String(index+1).padStart(2,"0")}`;$("question").textContent=q[0];$("answers").innerHTML="";q[1].forEach(([label,color])=>{const b=document.createElement("button");b.className="answer";b.textContent=label;b.addEventListener("click",()=>{scores[color]++;index++;if(index<questions.length)renderQuestion();else showResult();});$("answers").appendChild(b);});}
+function showResult(){
+  const ranked=Object.keys(scores).sort((a,b)=>scores[b]-scores[a]);
+  const winner=ranked[0], runnerUp=ranked[1];
+  const c=colors[winner], sub=colors[runnerUp];
+  $("quiz").hidden=true;$("result").hidden=false;
+  $("swatch").style.background=`radial-gradient(circle at 32% 28%,#ffffffaa,transparent 35%),${c.hex}`;
+  $("subSwatch").style.background=`radial-gradient(circle at 32% 28%,#ffffffaa,transparent 35%),${sub.hex}`;
+  $("mainColorName").textContent=c.short;
+  $("subColorName").textContent=sub.short;
+  $("englishName").textContent=c.en;
+  $("resultName").textContent=c.name;
+  $("adjective").textContent=c.adj;
+  $("nickname").textContent=`${c.name}에 스며든 ${sub.mood}`;
+  $("nicknameExplain").textContent=`주된 성향은 ${c.short}, 그 안에 ${sub.short}의 특징도 함께 담겨 있어요.`;
+  $("description").textContent=c.desc;
+  $("strength").textContent=c.strength;
+  $("message").textContent=c.message;
+  $("keywords").innerHTML="";
+  [...c.keys,sub.mood].forEach(k=>{const s=document.createElement("span");s.className="keyword";s.textContent=k;$("keywords").appendChild(s);});
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+$("startBtn").addEventListener("click",start);$("againBtn").addEventListener("click",start);
+</script>
+</body>
+</html>
